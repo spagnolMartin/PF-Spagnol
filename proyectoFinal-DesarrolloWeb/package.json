@@ -1,0 +1,27 @@
+{
+  "name": "proyectofinal-desarrolloweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css":"sass styles/scss/styles.scss styles/css/styles.css",
+    "watch-css":"nodemon -e scss -x \"npm run build-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spagnolMartin/PF-Spagnol.git"
+  },
+  "author": "martinSpagnol",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spagnolMartin/PF-Spagnol/issues"
+  },
+  "homepage": "https://github.com/spagnolMartin/PF-Spagnol#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "sass": "^1.55.0"
+  }
+}
