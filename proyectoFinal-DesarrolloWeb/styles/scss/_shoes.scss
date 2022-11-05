@@ -1,0 +1,124 @@
+/* Shoes */
+@import "mixins";
+
+.shoes_list_cat{
+    @include shoes_li(200px);
+    grid-area: shoes_list_cat;
+}
+
+
+.shoes_list{
+@include shoes_li(2%);
+
+    .shoes{
+        @include shoes_gen(400px,490px);
+        
+        &:hover{
+            transform: scale(1.03);
+        }
+
+        .shoes_name{
+            margin-left: 30px ;
+        }
+
+        .shoes_photo{
+            @include photo_size(300px,300px);
+            padding-top: 2%;
+            margin-left: 50px;
+        }
+
+        .shoes_brand{
+            font-weight: bold;
+            margin-left: 30px;
+        }
+
+        .shoes_costs{
+            @include shoes_details(30px,300px,30px);
+
+            .shoes_price{
+                font-weight: bold;      
+                margin-right: 250px;
+            }
+            
+            .shoes_buy_button{
+                @include button;
+
+                &:hover{
+                    font-size: 16px;
+                    animation: shake 1s linear;
+                }
+
+                @keyframes shake{
+                    0%{
+                        transform: rotateZ(0deg);
+                    }
+                
+                    25%{
+                        transform: rotateZ(15deg);
+                    }
+                
+                    50%{
+                        transform: rotateZ(-15deg);
+                    }
+                
+                    75%{
+                        transform: rotateZ(15deg);
+                    }
+                
+                    100%{
+                        transform: rotateZ(0deg);
+                    }
+                }  
+            }             
+        }
+
+        @media screen and (max-width:400px) {
+            &{
+                @include shoes_gen(350px,400px);
+            }
+
+            .shoes_costs{
+                @include shoes_details(20px,250px, 20px);
+
+                .shoes_price{
+                    margin-right: 200px;
+                    padding-bottom: 10%;
+                    font-size: 15px;
+                }
+
+                .shoes_buy_button{
+                    margin-bottom: 10%;
+                }
+
+            }
+
+            .shoes_brand{
+                margin-left: 20px;
+            }
+
+            .shoes_name{
+                margin-left: 20px;
+            }
+
+            .shoes_photo{
+                @include photo_size(250px, 250px);
+                margin-left: 50px;
+            }
+
+        }
+    }
+}
+
+.category_box{
+    padding-top: 5%;
+    padding-left: 5%;
+
+    .category_title{
+        left: 45px;
+        top: 120px;
+        font-weight: bold;
+        font-size: 25px;
+        color: #137A61;
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,14 @@
+/*              Bodies                   */
+@import "mixins";
+
+.category_body{
+    @include bodies("shoes_list_cat");
+}
+
+.main_body{
+    @include bodies("main");
+}
+
+.login_body{
+    @include bodies("login")
+}

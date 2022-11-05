@@ -1,0 +1,55 @@
+/*                        Mixin's                             */
+@mixin button{
+    border-radius: 20px;
+    border: 1px solid #ff4b2b;
+    background-color: #ff4b2b;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+@mixin shoes_details($height,$width, $mleft){
+    display: flex;
+    height: $height;
+    width: $width;
+    margin-left: $mleft;
+    padding-top: 10%;
+    align-items: center;
+}
+
+@mixin photo_size($width, $height) {
+    width: $width;
+    height: $height
+}
+
+@mixin shoes_li($padding_t_value){
+    padding-top: $padding_t_value;
+    padding-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    }
+    
+@mixin shoes_gen ($width, $height){
+    display: flex;
+    flex-direction: column;
+    width: $width;
+    height: $height;
+    background-color: white;
+    margin-bottom: 8%;
+    border-radius: 00.5%;
+}
+
+@mixin head_size($m-left) {
+    position: absolute;
+    margin-left: $m-left;
+}
+
+@mixin bodies($grid_area) {
+    display: grid;
+    grid-template-areas:
+    "nav"            "nav"            "nav"
+    $grid_area       $grid_area       $grid_area
+    "footer"         "footer"         "footer" ;
+}

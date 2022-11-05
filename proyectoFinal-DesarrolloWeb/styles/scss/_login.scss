@@ -1,0 +1,79 @@
+/* login form */
+@import "mixins";
+
+form{
+    left: 45px;
+    top: 120px;
+    margin-top: 4%;
+    margin-left: 35%;
+    margin-bottom: 5%;
+    left: 0px;
+    align-items: center;
+    background-color:white;
+    width: 30%;
+    height: 450px;
+    opacity: 0.8;
+    border-radius: 1%;
+    border-style:hidden;
+    grid-area: login;
+
+    .login_div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 15%;
+
+        img{
+            margin-bottom: 1%;
+        }
+
+        .form_box{
+            width: 80%;
+            background-color: #eee;
+            border: none;
+            padding: 12px 15px;
+            margin: 8px;
+            height: max-content;
+        }
+
+        .login_label{
+            padding: 12px 45px;
+            color: rgb(98, 98, 98);
+        }
+        
+        .login_button{
+            @include button();
+            font-size: 12px;
+            letter-spacing: 1px;
+            padding: 12px 45px;
+
+            &:active{
+                transform: scale(0.95);
+            }
+
+            &:hover{
+                transform: scale(1.1);
+                transition: 1s ease-out;
+            }
+        }
+
+
+    }
+
+    
+    @media screen and (max-width: 920px){
+        &{
+            margin-left: 15%;
+            width: 70%;
+            height: 500px;
+            justify-content: center;
+
+            
+            .login_label{
+                font-size: 12px;
+            }
+        }
+
+}
+
+}

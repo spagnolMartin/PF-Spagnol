@@ -1,0 +1,39 @@
+/*                             Home background                                */
+@import "mixins";
+
+main{
+    grid-area: main;
+}
+
+.home{
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-end;
+    left: 0px;
+    width: 100%;
+    height: 686px;
+    background-image: url(../../imagenes/nike_dunk_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    .home_title{
+        padding-left: 5%;
+        top: 650px;
+        font-weight: bold;
+        font-size: 45px;
+        margin-bottom: 0%;
+        color: #137A61;
+    }
+
+    .home_subtitle{
+        padding-left: 5%;
+        top: 650px;
+        font-weight: 100;
+        font-size: 45px;
+        padding-bottom: 5%;
+        color: #137A61;
+    }
+
+}

@@ -9,8 +9,12 @@ body {
   overflow-x: hidden;
 }
 
-/*                        Mixin's                             */
-/*              Bodies                   */
+a {
+  text-decoration: none;
+  color: #f8dada;
+}
+
+/*                        Mixin's                             */ /*              Bodies                   */ /*                        Mixin's                             */
 .category_body {
   display: grid;
   grid-template-areas: "nav" "nav" "nav" "shoes_list_cat" "shoes_list_cat" "shoes_list_cat" "footer" "footer" "footer";
@@ -26,7 +30,7 @@ body {
   grid-template-areas: "nav" "nav" "nav" "login" "login" "login" "footer" "footer" "footer";
 }
 
-/*                             NavBar                               */
+/*                             NavBar                               */ /*                        Mixin's                             */
 .nav {
   position: fixed;
   width: 100%;
@@ -149,7 +153,7 @@ body {
   }
 }
 
-/*                             Home background                                */
+/*                             Home background                                */ /*                        Mixin's                             */
 main {
   grid-area: main;
 }
@@ -184,7 +188,7 @@ main {
   color: #137A61;
 }
 
-/* Shoes */
+/* Shoes */ /*                        Mixin's                             */
 .shoes_list_cat {
   padding-top: 200px;
   padding-bottom: 2%;
@@ -322,7 +326,7 @@ main {
   margin-top: 20px;
 }
 
-/* login form */
+/* login form */ /*                        Mixin's                             */
 form {
   left: 45px;
   top: 120px;
@@ -389,12 +393,7 @@ form .login_div .login_button:hover {
   }
 }
 
-a {
-  text-decoration: none;
-  color: #f8dada;
-}
-
-/* footer */
+/* footer */ /*                        Mixin's                             */
 footer {
   z-index: 5;
   width: 100%;
