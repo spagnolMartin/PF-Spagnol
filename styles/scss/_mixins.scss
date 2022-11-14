@@ -5,6 +5,16 @@
     background-color: #ff4b2b;
     color: whitesmoke;
     font-weight: bold;
+
+    &:active{
+        transform: scale(0.95);
+    }
+
+    &:hover{
+        transform: scale(1.1);
+        transition: 1s ease-out;
+    }
+    
 }
 
 @mixin shoes_details($height,$width, $mleft){
@@ -49,7 +59,29 @@
 @mixin bodies($grid_area) {
     display: grid;
     grid-template-areas:
-    "nav"            "nav"            "nav"
-    $grid_area       $grid_area       $grid_area
-    "footer"         "footer"         "footer" ;
+    "nav"        
+    $grid_area   
+    "footer"  ;
+}
+
+@mixin forms {
+    left: 45px;
+    top: 120px;
+    margin-top: 4%;
+    margin-bottom: 5%;
+    left: 0px;
+    align-items: center;
+    background-color:white;
+    opacity: 0.8;
+    border-radius: 1%;
+    border-style:hidden;
+}
+
+@mixin formBox {
+    width: 80%;
+    background-color: #eee;
+    border: none;
+    padding: 12px 15px;
+    margin: 8px;
+    height: max-content;
 }

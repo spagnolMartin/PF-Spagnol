@@ -1,6 +1,4 @@
 /*              Bodies                   */
-@import "mixins";
-
 .category_body{
     @include bodies("shoes_list_cat");
 }

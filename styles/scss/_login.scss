@@ -1,21 +1,10 @@
 /* login form */
-@import "mixins";
-
-form{
-    left: 45px;
-    top: 120px;
-    margin-top: 4%;
-    margin-left: 35%;
-    margin-bottom: 5%;
-    left: 0px;
-    align-items: center;
-    background-color:white;
+.login_form{
+    @include forms;
     width: 30%;
     height: 450px;
-    opacity: 0.8;
-    border-radius: 1%;
-    border-style:hidden;
     grid-area: login;
+    margin-left: 35%;
 
     .login_div{
         display: flex;
@@ -28,12 +17,7 @@ form{
         }
 
         .form_box{
-            width: 80%;
-            background-color: #eee;
-            border: none;
-            padding: 12px 15px;
-            margin: 8px;
-            height: max-content;
+            @include formBox;
         }
 
         .login_label{
@@ -46,15 +30,6 @@ form{
             font-size: 12px;
             letter-spacing: 1px;
             padding: 12px 45px;
-
-            &:active{
-                transform: scale(0.95);
-            }
-
-            &:hover{
-                transform: scale(1.1);
-                transition: 1s ease-out;
-            }
         }
 
 

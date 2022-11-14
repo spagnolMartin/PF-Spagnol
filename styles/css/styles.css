@@ -1,3 +1,4 @@
+/*                        Mixin's                             */
 html {
   font-family: "Sora", sans-serif;
 }
@@ -14,23 +15,23 @@ a {
   color: #f8dada;
 }
 
-/*                        Mixin's                             */ /*              Bodies                   */ /*                        Mixin's                             */
+/*              Bodies                   */
 .category_body {
   display: grid;
-  grid-template-areas: "nav" "nav" "nav" "shoes_list_cat" "shoes_list_cat" "shoes_list_cat" "footer" "footer" "footer";
+  grid-template-areas: "nav" "shoes_list_cat" "footer";
 }
 
 .main_body {
   display: grid;
-  grid-template-areas: "nav" "nav" "nav" "main" "main" "main" "footer" "footer" "footer";
+  grid-template-areas: "nav" "main" "footer";
 }
 
 .login_body {
   display: grid;
-  grid-template-areas: "nav" "nav" "nav" "login" "login" "login" "footer" "footer" "footer";
+  grid-template-areas: "nav" "login" "footer";
 }
 
-/*                             NavBar                               */ /*                        Mixin's                             */
+/*                             NavBar                               */
 .nav {
   position: fixed;
   width: 100%;
@@ -153,9 +154,10 @@ a {
   }
 }
 
-/*                             Home background                                */ /*                        Mixin's                             */
+/*                             Home background                                */
 main {
   grid-area: main;
+  margin-bottom: 5%;
 }
 
 .home {
@@ -188,7 +190,7 @@ main {
   color: #137A61;
 }
 
-/* Shoes */ /*                        Mixin's                             */
+/* Shoes */
 .shoes_list_cat {
   padding-top: 200px;
   padding-bottom: 2%;
@@ -253,6 +255,13 @@ main {
   color: whitesmoke;
   font-weight: bold;
 }
+.shoes_list .shoes .shoes_costs .shoes_buy_button:active {
+  transform: scale(0.95);
+}
+.shoes_list .shoes .shoes_costs .shoes_buy_button:hover {
+  transform: scale(1.1);
+  transition: 1s ease-out;
+}
 .shoes_list .shoes .shoes_costs .shoes_buy_button:hover {
   font-size: 16px;
   animation: shake 1s linear;
@@ -276,21 +285,13 @@ main {
 }
 @media screen and (max-width: 400px) {
   .shoes_list .shoes {
-    display: flex;
-    flex-direction: column;
-    width: 350px;
+    max-width: 350px;
     height: 400px;
-    background-color: white;
-    margin-bottom: 8%;
-    border-radius: 0.5%;
   }
   .shoes_list .shoes .shoes_costs {
-    display: flex;
     height: 20px;
     width: 250px;
     margin-left: 20px;
-    padding-top: 10%;
-    align-items: center;
   }
   .shoes_list .shoes .shoes_costs .shoes_price {
     margin-right: 200px;
@@ -326,33 +327,33 @@ main {
   margin-top: 20px;
 }
 
-/* login form */ /*                        Mixin's                             */
-form {
+/* login form */
+.login_form {
   left: 45px;
   top: 120px;
   margin-top: 4%;
-  margin-left: 35%;
   margin-bottom: 5%;
   left: 0px;
   align-items: center;
   background-color: white;
-  width: 30%;
-  height: 450px;
   opacity: 0.8;
   border-radius: 1%;
   border-style: hidden;
+  width: 30%;
+  height: 450px;
   grid-area: login;
+  margin-left: 35%;
 }
-form .login_div {
+.login_form .login_div {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 15%;
 }
-form .login_div img {
+.login_form .login_div img {
   margin-bottom: 1%;
 }
-form .login_div .form_box {
+.login_form .login_div .form_box {
   width: 80%;
   background-color: #eee;
   border: none;
@@ -360,11 +361,11 @@ form .login_div .form_box {
   margin: 8px;
   height: max-content;
 }
-form .login_div .login_label {
+.login_form .login_div .login_label {
   padding: 12px 45px;
   color: rgb(98, 98, 98);
 }
-form .login_div .login_button {
+.login_form .login_div .login_button {
   border-radius: 20px;
   border: 1px solid #ff4b2b;
   background-color: #ff4b2b;
@@ -374,53 +375,63 @@ form .login_div .login_button {
   letter-spacing: 1px;
   padding: 12px 45px;
 }
-form .login_div .login_button:active {
+.login_form .login_div .login_button:active {
   transform: scale(0.95);
 }
-form .login_div .login_button:hover {
+.login_form .login_div .login_button:hover {
   transform: scale(1.1);
   transition: 1s ease-out;
 }
 @media screen and (max-width: 920px) {
-  form {
+  .login_form {
     margin-left: 15%;
     width: 70%;
     height: 500px;
     justify-content: center;
   }
-  form .login_label {
+  .login_form .login_label {
     font-size: 12px;
   }
 }
 
-/* footer */ /*                        Mixin's                             */
+/* footer */
 footer {
-  z-index: 5;
+  z-index: 2;
   width: 100%;
-  height: 250px;
+  height: 350px;
   opacity: 0.8;
+  display: flex;
+  flex-direction: row;
   background-color: black;
   grid-area: footer;
+  justify-content: center;
 }
 footer .footer_list {
+  position: absolute;
+  width: 100%;
   padding-top: 2%;
   height: 40px;
   left: 0px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: start;
 }
-footer .footer_list .footer_list_icons {
-  list-style-type: none;
-  padding-right: 1%;
-  border-radius: 10%;
+footer .footer_list .media_list {
+  display: flex;
+  flex-direction: row;
+  padding-top: 1%;
 }
-footer .footer_image {
+footer .footer_list .media_list .media_icon {
+  height: 30px;
+  width: 30px;
+  padding-right: 5%;
+}
+footer .footer_list .footer_image {
   width: 30px;
   height: 30px;
 }
-footer .sec_footer_details {
+footer .footer_list .sec_footer_details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -428,20 +439,134 @@ footer .sec_footer_details {
   padding-top: 2%;
   padding-left: 2.2%;
 }
-footer .footer_name {
+footer .footer_list .footer_name {
   color: #f8dada;
   font-size: 25px;
   font-weight: 700;
   padding-top: 0.2%;
 }
-footer .footer_legend {
+footer .footer_list .footer_legend {
   color: #f8dada;
   font-style: italic;
-  padding-top: 0.2%;
+  padding-top: 1%;
 }
-footer .footer_details {
+footer .footer_list .footer_details {
   color: #f8dada;
   padding-top: 0.2%;
+}
+
+.payment_methods_div {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-bottom: 2%;
+  background-color: #137A61;
+  height: 300px;
+}
+.payment_methods_div .payment_method {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  height: 300px;
+  background-color: white;
+  margin-bottom: 8%;
+  border-radius: 0.5%;
+  background-color: #137A61;
+  align-items: center;
+  margin-bottom: 5%;
+  border-style: solid none solid none;
+  border-color: black;
+}
+.payment_methods_div .payment_method .payment_img {
+  margin-top: 80px;
+  height: 50px;
+  width: 50px;
+}
+.payment_methods_div .payment_method .payment_title {
+  font-size: 25px;
+  font-weight: bold;
+}
+.payment_methods_div .payment_method .payment_desc {
+  margin-right: 5px;
+}
+@media screen and (max-width: 400px) {
+  .payment_methods_div {
+    max-width: 350px;
+    height: 400px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .payment_methods_div {
+    flex-wrap: wrap;
+    overflow-x: auto;
+  }
+}
+
+.contact_form {
+  left: 45px;
+  top: 120px;
+  margin-top: 4%;
+  margin-bottom: 5%;
+  left: 0px;
+  align-items: center;
+  background-color: white;
+  opacity: 0.8;
+  border-radius: 1%;
+  border-style: hidden;
+  width: 80%;
+  height: 500px;
+  background-color: rgb(255, 255, 255);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.contact_form h2 {
+  margin-top: 2%;
+  align-self: center;
+}
+.contact_form .contact_button {
+  border-radius: 20px;
+  border: 1px solid #ff4b2b;
+  background-color: #ff4b2b;
+  color: whitesmoke;
+  font-weight: bold;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 12px 45px;
+  align-self: center;
+  margin-bottom: 1%;
+}
+.contact_form .contact_button:active {
+  transform: scale(0.95);
+}
+.contact_form .contact_button:hover {
+  transform: scale(1.1);
+  transition: 1s ease-out;
+}
+.contact_form .form_box {
+  width: 80%;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px;
+  height: max-content;
+  margin: 1% auto 1% auto;
+}
+.contact_form .message_box {
+  width: 80%;
+  background-color: #eee;
+  border: none;
+  padding: 12px 15px;
+  margin: 8px;
+  height: max-content;
+  height: 200px;
+  margin: 1% auto 1% auto;
 }
 
 /*# sourceMappingURL=styles.css.map */

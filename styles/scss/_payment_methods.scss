@@ -1,0 +1,43 @@
+.payment_methods_div{
+    @include shoes_li(2%);
+    margin-bottom: 2%;
+    background-color: #137A61;
+    height: 300px;
+    
+    .payment_method{
+        @include shoes_gen(400px, 300px);
+        background-color: #137A61;
+        align-items: center;
+        margin-bottom: 5%;
+        border-style: solid none solid none;
+        border-color: black;
+
+        .payment_img{
+            margin-top: 80px;
+            height: 50px;
+            width: 50px;
+        }
+
+        .payment_title{
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .payment_desc{
+            margin-right: 5px;
+        }
+    }
+
+    @media screen and (max-width:400px) {
+        &{
+            max-width: 350px;
+            height: 400px;
+            margin: auto;
+        }
+    }
+
+    @media screen and (max-width: 1200px) {
+        flex-wrap: wrap;
+        overflow-x: auto;
+    }
+}

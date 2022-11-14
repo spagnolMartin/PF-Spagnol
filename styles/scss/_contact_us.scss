@@ -1,0 +1,36 @@
+.contact_form{
+    @include forms;
+    width: 80%;
+    height: 500px;
+    background-color: rgb(255, 255, 255);
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2{
+        margin-top: 2%;
+        align-self: center;
+    }
+
+    .contact_button{
+        @include button;
+        font-size: 12px;
+        letter-spacing: 1px;
+        padding: 12px 45px;
+        align-self: center;
+        margin-bottom: 1%;
+    }
+
+    .form_box{
+        @include formBox;
+        margin: 1% auto 1% auto;
+    }
+
+    .message_box{
+        @include formBox;
+        height: 200px;
+        margin: 1% auto 1% auto;
+    }
+
+}

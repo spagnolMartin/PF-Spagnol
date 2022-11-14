@@ -1,6 +1,4 @@
 /* Shoes */
-@import "mixins";
-
 .shoes_list_cat{
     @include shoes_li(200px);
     grid-area: shoes_list_cat;
@@ -74,11 +72,14 @@
 
         @media screen and (max-width:400px) {
             &{
-                @include shoes_gen(350px,400px);
+                max-width: 350px;
+                height: 400px;
             }
 
             .shoes_costs{
-                @include shoes_details(20px,250px, 20px);
+                height:20px;
+                width:250px;
+                margin-left:20px;
 
                 .shoes_price{
                     margin-right: 200px;
@@ -101,7 +102,8 @@
             }
 
             .shoes_photo{
-                @include photo_size(250px, 250px);
+                width: 250px;
+                height: 250px;
                 margin-left: 50px;
             }
 
